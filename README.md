@@ -64,5 +64,5 @@ Utilize seu cliete de serviços preferido para acessar as rotas.
 - [x] Editar o nome de um projeto;
 - [x] Deletar um projeto;
 - [x] Criar tarefas um projeto;
-- [ ] Adicionar middleware para verificar se o projeto existe;
+- [x] Adicionar middleware para verificar se o projeto existe;
 - [ ] Adicionar middleware global para contar as requisições que estão sendo feitas na aplicação;
