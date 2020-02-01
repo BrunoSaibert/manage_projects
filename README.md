@@ -34,9 +34,11 @@ Em seguida, instale as dependências;
 
 ```
 $ npm install
+```
 
 ou
 
+```
 $ yarn add
 ```
 
@@ -44,9 +46,11 @@ Assim que as dependências forrem instaladas, execute o comando;
 
 ```
 $ npm run dev
+```
 
 ou
 
+```
 $ yarn dev
 ```
 

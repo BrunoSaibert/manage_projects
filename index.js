@@ -4,7 +4,13 @@ const server = express();
 
 server.use(express.json());
 
-const projects = [];
+const projects = [
+  {
+    id: "1",
+    title: "Novo projeto",
+    tasks: []
+  }
+];
 
 server.get("/projects", (req, res) => {
   return res.json(projects);
@@ -43,6 +49,16 @@ server.delete("/projects/:id", (req, res) => {
   projects.splice(projectIndex, 1);
 
   return res.send();
+});
+
+server.post("/projects/:id/tasks", (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const projectFiltered = projects.find(project => project.id === id);
+  projectFiltered.tasks.push(title);
+
+  return res.json(projectFiltered);
 });
 
 server.listen(3000);
