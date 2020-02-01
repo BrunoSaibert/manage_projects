@@ -4,6 +4,7 @@ const server = express();
 
 server.use(express.json());
 
+let totalRequests = 0;
 const projects = [
   {
     id: "1",
@@ -13,6 +14,14 @@ const projects = [
 ];
 
 // Middlewares
+server.use((req, res, next) => {
+  totalRequests++;
+
+  console.log(`Total de requisições: ${totalRequests}`);
+
+  next();
+});
+
 function checkProjectExists(req, res, next) {
   const { id } = req.params;
 
