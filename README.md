@@ -41,7 +41,7 @@ $ npm install
 ou
 
 ```
-$ yarn add
+$ yarn
 ```
 
 Assim que as dependências forrem instaladas, execute o comando;
